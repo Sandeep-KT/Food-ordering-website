@@ -1,14 +1,14 @@
 <?php
 session_start();
-include 'users.php'; // database connection file
+include 'users.php'; 
 
-// Require login
+
 if (!isset($_SESSION['id'])) {
     echo "<p style='text-align:center;margin-top:20px;'>Please <a href='login.php'>login</a> to view your cart.</p>";
     exit;
 }
 
-// Fetch user's orders from DB
+
 $userId = $_SESSION['id'];
 $cart = [];
 $total = 0;
@@ -24,7 +24,7 @@ while ($row = $result->fetch_assoc()) {
     $total += $row['price'];
 }
 
-// Handle remove action
+
 if (isset($_GET['remove'])) {
     $removeId = (int)$_GET['remove'];
     $deleteStmt = $conn->prepare("DELETE FROM orders WHERE id = ? AND user_id = ?");
