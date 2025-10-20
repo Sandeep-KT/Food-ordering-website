@@ -1,19 +1,19 @@
 <?php
 session_start();
-include 'users.php'; // database connection
+include 'users.php'; 
 
-// Initialize session cart only if needed (optional for compatibility)
+
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-// Handle Add to Cart
+
 $added_item = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $item_name = $_POST['item_name'];
     $item_price = $_POST['item_price'];
 
-    // If user logged in → store in database
+   
     if (isset($_SESSION['id'])) {
         $uid = $_SESSION['id'];
         $stmt = $conn->prepare("INSERT INTO orders (user_id, item_name, price) VALUES (?, ?, ?)");
@@ -22,17 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->close();
         $added_item = $item_name;
     } else {
-        // Fallback for guest user (session cart)
+        
         $cart_item = ['name' => $item_name, 'price' => $item_price];
         $_SESSION['cart'][] = $cart_item;
         $added_item = $item_name;
     }
 }
 
-// Filter categories
+
 $category_filter = $_GET['category'] ?? 'all';
 
-// Define menu items
+
 $menu_items = [
     ['name'=>'Classic Burger','price'=>199,'category'=>'burgers','img'=>'https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&q=80'],
     ['name'=>'Cheese Burst Burger','price'=>249,'category'=>'burgers','img'=>'https://images.unsplash.com/photo-1603893662172-99ed0cea2a08?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZXNlJTIwYnVyZ2VyfGVufDB8fDB8fHww'],
@@ -46,7 +46,7 @@ $menu_items = [
     ['name'=>'Caesar Salad','price'=>159,'category'=>'salads','img'=>'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80']
 ];
 
-// Filter items
+
 $filtered_items = array_filter($menu_items, function($item) use ($category_filter) {
     return $category_filter === 'all' || $item['category'] === $category_filter;
 });
