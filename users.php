@@ -6,7 +6,7 @@ if (session_status() == PHP_SESSION_NONE) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "delishdb"; // name your database
+$dbname = "delishdb"; 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -14,3 +14,4 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
+
