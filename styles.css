@@ -1,4 +1,4 @@
-
+correct my styles.css if naything is worng
 * {
   box-sizing: border-box;
   margin: 0;
@@ -415,3 +415,189 @@ html, body {
 {
   margin-top: 25px;
 }
+
+
+.btn-sm {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;  
+  opacity: 1;      
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.categories a.category {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+
+.categories a.category.active {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* ==============================
+   Cart Page Styles
+   ============================== */
+
+.cart-item {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(13,17,23,0.06);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-item h4 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.cart-item p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.cart-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-actions .btn-sm {
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ef4444;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.cart-actions .btn-sm:hover {
+  background: #dc2626;
+}
+
+.total-price {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.auth-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      background: #f8fafc;
+      padding: 20px;
+    }
+    .auth-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(13,17,23,0.1);
+    }
+    .auth-card h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .auth-form input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    .auth-form button {
+      width: 100%;
+      padding: 12px;
+      background: #ef4444;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .auth-form button:hover {
+      background: #dc2626;
+    }
+    .auth-footer {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .auth-footer a {
+      color: #ef4444;
+      text-decoration: none;
+    }
+
+    .auth-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      background: #f8fafc;
+      padding: 20px;
+    }
+    .auth-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(13,17,23,0.1);
+    }
+    .auth-card h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .auth-form input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    .auth-form button {
+      width: 100%;
+      padding: 12px;
+      background: #ef4444;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .auth-form button:hover {
+      background: #dc2626;
+    }
+    .auth-footer {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .auth-footer a {
+      color: #ef4444;
+      text-decoration: none;
+    }
+
+
+
+
+
+
+
