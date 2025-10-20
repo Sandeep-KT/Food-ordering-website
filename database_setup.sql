@@ -1,6 +1,6 @@
 -- Create database
-CREATE DATABASE delish;
-USE delish;
+CREATE DATABASE delishdb;
+USE delishdb;
 
 -- Users table
 CREATE TABLE users (
@@ -19,3 +19,4 @@ CREATE TABLE orders (
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
